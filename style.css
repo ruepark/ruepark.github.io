@@ -1,13 +1,18 @@
-img {
+.link {
   width: 100%;
 }
 
+#sprout {
+  height: 40px;
+  padding-right: 5px;
+}
+
 .teal {
-  color: #13A575;
+  color: #3C8D75;
   font-weight: 900;
 }
 
-img:hover {
+.link:hover {
   cursor: pointer;
   filter: saturate(180%) drop-shadow(5px 5px 3px grey) brightness(110%);
 }
@@ -18,7 +23,7 @@ img:hover {
 
 h1 {
   margin-top: 4%;
-  margin-left: 10.5%;
+  margin-left: 10%;
   margin-bottom: 0;
   padding: 0;
   font-size: 40px;
