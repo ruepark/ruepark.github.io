@@ -25,7 +25,7 @@ li a {
 }
 
 li a:hover {
-	color: rgba(44, 168, 236, 1);
+	color: #48afc4;
 	text-decoration: none;
 	font: 300 1em/1.5em 'Lato';
 	opacity: 1;
@@ -113,7 +113,7 @@ h1 {
 }
 
 .icon:hover {
-	background-color: #2CA8EC;
+	background-color: #48afc4;
 	position: relative;
 	opacity:.7;
 }
