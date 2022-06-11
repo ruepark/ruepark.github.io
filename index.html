@@ -38,30 +38,63 @@ http://www.tooplate.com/view/2096-individual
       <body>
         <div class="parallax-window" data-parallax="scroll" data-image-src="img/dawn.jpg">
           <section class="container tm-page-1-content">
+
+            <div id="subscribe-modal" class="modal">
+                <div class="modal__content">
+                    <h2>Thank you!</h2>
+
+                    <p>
+                      You have successfully subscribed!
+                    </p>
+
+                    <!-- <div id="subscribe-close" class="close">&times;</div> -->
+                </div>
+            </div>
+
             <div class="row">
               <div class="col-md-6">
                 <a href="https://www.amazon.com/gp/product/B09SD6ZCSW/ref=dbs_a_def_rwt_bibl_vppi_i0"><img class="cover" src="img/cover.jpg" /></a>
               </div>
               <div class="col-md-6 ml-auto tm-text-white">
                 <header><h1>Dawn from the Ashes</h1></header>
-                <p>In this world, all of us are capable of magic. We just don’t know because of the Protectors.<br><br>
+                <p>All of us are capable of magic. We just don’t know because of the Protectors.<br><br>
 
                 Asher is a Protector, even if he doesn’t feel like one. <br><br>
                 When he wakes up to find the world in flames, it’s up to him to figure out what happened, and turn things around. Along the way he finds love, family, and himself.</p>
                 <hr/>
                 <h2>Join my newsletter</h2>
                 <p>Get inspo board for <i>Dawn from the Ashes</i> when you sign up! </p>
-                <div class="row">
-                  <div class="col-md-4"> 
-                    <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="first name"  required/>
+
+                <script type="text/javascript">var subscribed=false;</script>
+                <iframe name="hidden_subscriber_iframe" id="hidden_subscriber_iframe" style="display:none;"
+                onload="if(subscribed) {
+                  document.getElementById('subscribe-modal').style.display = 'flex'; 
+                  window.onclick = function(event) {
+                    var modal = document.getElementById('subscribe-modal');
+                    if (event.target === modal) {
+                          modal.style.display = 'none';
+                    }
+                    var span = document.getElementById('subscribe-close')[0];
+                    span.onclick = function() {
+                      document.getElementById('subscribe-modal').style.display = 'none';
+                    }}}"></iframe>
+
+                <form
+                  action="https://assets.mailerlite.com/jsonp/72679/forms/57576661205386861/subscribe"
+                  data-code=""
+                  method="post" target="hidden_subscriber_iframe" onsubmit="subscribed=true;">
+                  <div class="row">
+                    <div class="col-md-4"> 
+                      <input type="text" name="fields[name]" class="form-control" placeholder="first name" autocomplete="name" required/>
+                    </div>
+                    <div class="col-md-4"> 
+                      <input type="email" name="fields[email]" class="form-control" placeholder="email"  autocomplete="email" required/>
+                    </div>
+                    <div class="col-md-4"> 
+                      <button type="submit" class="btn btn-danger">subscribe</button>
+                    </div>
                   </div>
-                  <div class="col-md-4"> 
-                    <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="email"  required/>
-                  </div>
-                  <div class="col-md-4"> 
-                    <a href="#tm-section-2" class="btn btn-danger">subscribe</a>
-                  </div>
-                </div>
+                </form>
                 <br><br>
           </section>
         </div>
@@ -72,7 +105,10 @@ http://www.tooplate.com/view/2096-individual
               <div class="col-xl-6 col-md-8 ml-auto">
                 <article class="tm-bg-white-transparent-page3">
                   <header><h5 class="tm-bg-white">M Rune</h5></header>
-                  <p class="tm-bg-white2">loves to escape into magical worlds full of adventure and true love, both by writing and reading about them. When she's not writing or reading, she's drawing, rock climbing or playing with her puppy. </p>
+                  <p class="tm-bg-white2">loves to escape into magical worlds full of adventure and true love - both by writing and reading about them. 
+                    <br><br>
+
+                  when she's not writing or reading, she's drawing, rock climbing, or playing with her puppy. </p>
                 </article>
               </div>
             </div>
@@ -83,7 +119,7 @@ http://www.tooplate.com/view/2096-individual
         <div class="parallax-window tm-position-relative tm-form-section" data-parallax="scroll" data-image-src="img/tr.jpg">
           <div class="container ">
 
-            <div id="modal" class="modal">
+            <div id="message-modal" class="modal">
                 <div class="modal__content">
                     <h2>Thank you!</h2>
 
@@ -91,7 +127,7 @@ http://www.tooplate.com/view/2096-individual
                         Message was successfully sent!
                     </p>
 
-                    <div class="close">&times;</div>
+                    <!-- <div id="message-close" class="close">&times;</div> -->
                 </div>
             </div>
 
@@ -106,15 +142,15 @@ http://www.tooplate.com/view/2096-individual
                 <script type="text/javascript">var submitted=false;</script>
                       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
                       onload="if(submitted) {
-                        document.getElementById('modal').style.display = 'flex'; 
+                        document.getElementById('message-modal').style.display = 'flex'; 
                         window.onclick = function(event) {
-                          var modal = document.getElementById('modal');
+                          var modal = document.getElementById('message-modal');
                           if (event.target === modal) {
                                 modal.style.display = 'none';
                           }
-                          var span = document.getElementsByClassName('close')[0];
+                          var span = document.getElementById('message-close')[0];
                           span.onclick = function() {
-                            document.getElementById('modal').style.display = 'none';
+                            document.getElementById('message-modal').style.display = 'none';
                           }}}"></iframe>                  
                   <form 
                     action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSdjS8_jTdgDqXVGqD2N0_iQAeaPNjspApQcekLCOXE2tCT_2w/formResponse"
@@ -168,7 +204,5 @@ http://www.tooplate.com/view/2096-individual
           <script type="text/javascript" src="slick/slick.min.js"></script> 
           <!-- Slick Carousel -->
 
-          <!-- Magnific Popup core JS file -->
-          <script src="js/jquery.magnific-popup.min.js"></script>
         </body>
         </html>
